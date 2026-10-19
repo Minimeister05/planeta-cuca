@@ -39,6 +39,10 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
+  --color-ouro: var(--ouro);
+  --color-ouro-escuro: var(--ouro-escuro);
+  --color-sucesso: var(--sucesso);
+  --color-vidro: var(--vidro);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -49,30 +53,30 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  --background: oklch(0.97 0.02 285);
+  --foreground: oklch(0.27 0.07 285);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.27 0.07 285);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.27 0.07 285);
+  --primary: oklch(0.56 0.22 292);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.94 0.04 285);
+  --secondary-foreground: oklch(0.32 0.09 285);
+  --muted: oklch(0.94 0.03 285);
+  --muted-foreground: oklch(0.5 0.06 285);
+  --accent: oklch(0.93 0.05 300);
+  --accent-foreground: oklch(0.32 0.09 285);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: oklch(0.89 0.04 285);
+  --input: oklch(0.89 0.04 285);
+  --ring: oklch(0.7 0.15 292);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
   --chart-4: oklch(0.371 0 0);
   --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
+  --radius: 1rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -81,27 +85,37 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Planeta Cuca: céu, estrelinhas e cores de recompensa */
+  --ceu-1: oklch(0.9 0.07 245);
+  --ceu-2: oklch(0.93 0.05 295);
+  --ceu-3: oklch(0.95 0.05 350);
+  --brilho: oklch(0.62 0.17 292 / 0.5);
+  --ouro: oklch(0.84 0.17 85);
+  --ouro-escuro: oklch(0.62 0.15 65);
+  --sucesso: oklch(0.68 0.19 150);
+  --vidro: oklch(1 0 0 / 0.72);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: oklch(0.17 0.05 282);
+  --foreground: oklch(0.96 0.02 285);
+  --card: oklch(0.24 0.06 285);
+  --card-foreground: oklch(0.96 0.02 285);
+  --popover: oklch(0.24 0.06 285);
+  --popover-foreground: oklch(0.96 0.02 285);
+  --primary: oklch(0.74 0.17 295);
+  --primary-foreground: oklch(0.18 0.05 282);
+  --secondary: oklch(0.29 0.06 285);
+  --secondary-foreground: oklch(0.95 0.02 285);
+  --muted: oklch(0.28 0.05 285);
+  --muted-foreground: oklch(0.76 0.05 285);
+  --accent: oklch(0.31 0.07 295);
+  --accent-foreground: oklch(0.96 0.02 285);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 16%);
+  --ring: oklch(0.62 0.15 292);
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -115,6 +129,15 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  --ceu-1: oklch(0.15 0.06 265);
+  --ceu-2: oklch(0.2 0.08 292);
+  --ceu-3: oklch(0.21 0.08 330);
+  --brilho: oklch(1 0 0 / 0.9);
+  --ouro: oklch(0.86 0.16 88);
+  --ouro-escuro: oklch(0.7 0.15 70);
+  --sucesso: oklch(0.74 0.18 150);
+  --vidro: oklch(0.24 0.06 285 / 0.72);
 }
 
 @layer base {
@@ -130,4 +153,102 @@
   html {
     @apply font-sans;
   }
+}
+
+/* ---------------------------------------------------------------- animações */
+@theme {
+  --animate-flutuar: flutuar 5s ease-in-out infinite;
+  --animate-piscar: piscar 3s ease-in-out infinite;
+  --animate-tremer: tremer 0.4s ease-in-out;
+  --animate-saltar: saltar 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  --animate-pulsar: pulsar 1.6s ease-in-out infinite;
+  --animate-balancar: balancar 2.4s ease-in-out infinite;
+  --animate-girar-lento: spin 40s linear infinite;
+
+  @keyframes flutuar {
+    0%, 100% { transform: translateY(0) }
+    50% { transform: translateY(-10px) }
+  }
+  @keyframes piscar {
+    0%, 100% { opacity: 0.25; scale: 0.8 }
+    50% { opacity: 1; scale: 1.15 }
+  }
+  @keyframes tremer {
+    0%, 100% { translate: 0 }
+    20% { translate: -8px }
+    40% { translate: 7px }
+    60% { translate: -5px }
+    80% { translate: 3px }
+  }
+  @keyframes saltar {
+    0% { opacity: 0; scale: 0.3 }
+    100% { opacity: 1; scale: 1 }
+  }
+  @keyframes pulsar {
+    0%, 100% { scale: 1 }
+    50% { scale: 1.08 }
+  }
+  @keyframes balancar {
+    0%, 100% { rotate: -6deg }
+    50% { rotate: 6deg }
+  }
+}
+
+/* Meteoro caindo: a duração vem do jogo (mais devagar pros pequenos) */
+@keyframes cair {
+  from { top: -18% }
+  to { top: 74% }
+}
+
+/* Faíscas da explosão: cada uma voa pra uma direção (--dx, --dy) */
+@keyframes faisca {
+  from { opacity: 1; translate: 0 0; scale: 1 }
+  to { opacity: 0; translate: var(--dx) var(--dy); scale: 0.3 }
+}
+
+@keyframes raio-laser {
+  from { opacity: 1; scale: 1 0 }
+  30% { opacity: 1; scale: 1 1 }
+  to { opacity: 0; scale: 0.2 1 }
+}
+
+@keyframes gota {
+  from { translate: 0 -40px; opacity: 0 }
+  20% { opacity: 1 }
+  to { translate: 0 90px; opacity: 0 }
+}
+
+@keyframes brilho-raro {
+  to { background-position: 200% center }
+}
+
+@keyframes virar-carta {
+  0% { rotate: y 180deg; scale: 0.6 }
+  60% { rotate: y 0deg; scale: 1.1 }
+  100% { rotate: y 0deg; scale: 1 }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-flutuar, .animate-piscar, .animate-balancar, .animate-pulsar, .animate-girar-lento {
+    animation: none !important;
+  }
+}
+
+@layer base {
+  /* Toque rápido no celular: sem zoom de duplo toque e sem destaque azul */
+  button, a, [role="button"] {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Pipo pisca o olho de vez em quando */
+@keyframes piscar-olho {
+  0%, 93%, 100% { scale: 1 1 }
+  96% { scale: 1 0.1 }
+}
+.pipo-olho {
+  animation: piscar-olho 4.5s infinite;
+  transform-origin: 60px 58px;
+  transform-box: view-box;
 }
