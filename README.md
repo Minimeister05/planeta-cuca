@@ -4,6 +4,8 @@
 
 Jogos educativos divertidos de verdade pra crianças de 4 a 12 anos: matemática, leitura, programação, cores e música. **Grátis, sem cadastro e sem anúncios.**
 
+**▶ Jogar agora: https://minimeister05.github.io/planeta-cuca/**
+
 O Pipo, um alienzinho de um olho só, guia a criança por uma galáxia onde cada planeta é um jogo. As estrelas ganhas viram pacotinhos de figurinhas com curiosidades reais.
 
 ## Os planetas
@@ -43,7 +45,7 @@ Abre em [http://localhost:3000](http://localhost:3000). Não precisa de nenhuma 
 
 ## Deploy
 
-**GitHub Pages (atual):** cada push no `main` publica sozinho pelo workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml). Na primeira vez, em **Settings → Pages → Build and deployment**, troca o **Source** pra **GitHub Actions**. O site fica em https://minimeister05.github.io/planeta-cuca/
+**GitHub Pages (atual):** cada push no `main` publica sozinho pelo workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml). O **Source** do Pages (Settings → Pages) precisa estar em **GitHub Actions**. O site fica em https://minimeister05.github.io/planeta-cuca/
 
 Pra testar a versão do Pages localmente: `PAGES_BASE_PATH=/planeta-cuca npm run build` gera a pasta `out/`.
 
@@ -62,5 +64,6 @@ Onde fica cada coisa e como criar um jogo novo: [`AGENTS.md`](AGENTS.md).
 - [x] Favicon e ícone da Apple
 - [ ] Analytics (o da Vercel não funciona no GitHub Pages)
 - [ ] Lighthouse verde
-- [ ] Deploy no ar (GitHub Pages) + domínio
+- [x] Deploy no ar (GitHub Pages)
+- [ ] Domínio próprio
 - [ ] Mostrei pra uma criança
