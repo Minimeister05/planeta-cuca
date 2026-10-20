@@ -27,14 +27,19 @@ Jogos educativos divertidos de verdade para crianças de 4 a 12 anos: matemátic
 - `src/lib/progresso.ts` — estrelas, recordes, níveis, figurinhas, som/voz (localStorage, sem login)
 - `src/lib/nivel.ts` — dificuldade adaptativa (3 acertos sobe, 2 erros desce)
 - `src/lib/figurinhas.ts` — figurinhas do álbum com curiosidades (confira o fato antes de adicionar!)
-- `src/lib/som.ts` (Web Audio, sem arquivos) · `src/lib/voz.ts` (narração pt-BR) · `src/lib/marca.ts` (Pipo em SVG pras imagens geradas)
-- `src/app/` — páginas (App Router). `opengraph-image.tsx`, `icon.tsx` e `apple-icon.tsx` geram as imagens por código
+- `src/lib/som.ts` (Web Audio, sem arquivos) · `src/lib/voz.ts` (narração pt-BR)
+- `src/app/` — páginas (App Router). `icon.png`, `apple-icon.png` e `opengraph-image.png` são arquivos fixos (o export estático do GitHub Pages não serve imagem gerada por código)
+- `.github/workflows/pages.yml` — publica no GitHub Pages a cada push no `main`
 - `src/components/ui/` — componentes shadcn. Adicione com `npx shadcn@latest add <componente>`
 
 ## Jogo novo
 1. Lógica em `src/lib/<id>.ts`, tela em `src/components/jogos/<id>.tsx` usando `CascaJogo`, `Abertura`, `TelaFinal` e `useSalvarRodada`.
 2. Registra em `src/lib/jogos.ts` e cria `src/app/<id>/page.tsx` com título e descrição pro SEO.
 3. Testa nos níveis 1, 5 e 9, no celular e nos dois temas.
+
+## Hospedagem
+- **GitHub Pages** (atual): o workflow roda o build com `PAGES_BASE_PATH`, que liga `output: "export"` + `basePath` no `next.config.ts`. Tudo tem que funcionar como site estático: nada de Server Actions, rotas de API, cookies ou dados do servidor.
+- **Vercel** também funciona sem mudar nada (build normal, sem `PAGES_BASE_PATH`); o Vercel Analytics só liga lá.
 
 ## Regras
 - Público: crianças de 4 a 12 anos. Botões grandes, textos curtos, tudo narrado com `falar()`. Nada de coletar dado de criança.

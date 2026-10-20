@@ -19,7 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
+  // Só o domínio: o Next já coloca a subpasta do GitHub Pages (basePath) nos caminhos das imagens
+  metadataBase: new URL(new URL(site.url).origin),
   title: { default: site.name, template: `%s · ${site.name}` },
   description: site.description,
   applicationName: site.name,
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: site.locale,
-    url: "/",
+    url: site.url,
     siteName: site.name,
     title: site.name,
     description: site.description,
@@ -58,8 +59,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <FundoEstrelado />
           {children}
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
+        {/* Analytics da Vercel só existe hospedando na Vercel (no GitHub Pages daria 404) */}
+        {process.env.VERCEL && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
       </body>
     </html>
   );

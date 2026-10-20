@@ -1,6 +1,6 @@
 # 🪐 Planeta Cuca
 
-![Planeta Cuca — jogos educativos grátis pra crianças de 4 a 12 anos](docs/capa.png)
+![Planeta Cuca — jogos educativos grátis pra crianças de 4 a 12 anos](src/app/opengraph-image.png)
 
 Jogos educativos divertidos de verdade pra crianças de 4 a 12 anos: matemática, leitura, programação, cores e música. **Grátis, sem cadastro e sem anúncios.**
 
@@ -43,9 +43,11 @@ Abre em [http://localhost:3000](http://localhost:3000). Não precisa de nenhuma 
 
 ## Deploy
 
-1. Em [vercel.com/new](https://vercel.com/new), importa este repositório e clica em **Deploy**.
-2. Pronto. A URL do site (SEO, sitemap e imagem de compartilhamento) vem sozinha da Vercel.
-3. Se usar domínio próprio, coloca `NEXT_PUBLIC_SITE_URL` em **Settings → Environment Variables** (veja o `.env.example`).
+**GitHub Pages (atual):** cada push no `main` publica sozinho pelo workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml). Na primeira vez, em **Settings → Pages → Build and deployment**, troca o **Source** pra **GitHub Actions**. O site fica em https://minimeister05.github.io/planeta-cuca/
+
+Pra testar a versão do Pages localmente: `PAGES_BASE_PATH=/planeta-cuca npm run build` gera a pasta `out/`.
+
+**Vercel (alternativa):** importa o repositório em [vercel.com/new](https://vercel.com/new) e clica em Deploy, sem variável nenhuma. Com domínio próprio, coloca `NEXT_PUBLIC_SITE_URL` em **Settings → Environment Variables**.
 
 ## Stack
 
@@ -58,7 +60,7 @@ Onde fica cada coisa e como criar um jogo novo: [`AGENTS.md`](AGENTS.md).
 - [ ] Testado num celular de verdade (voz e sons)
 - [x] Título, descrição e imagem de compartilhamento
 - [x] Favicon e ícone da Apple
-- [ ] Analytics ligado no painel da Vercel
+- [ ] Analytics (o da Vercel não funciona no GitHub Pages)
 - [ ] Lighthouse verde
-- [ ] Domínio + deploy na Vercel
+- [ ] Deploy no ar (GitHub Pages) + domínio
 - [ ] Mostrei pra uma criança

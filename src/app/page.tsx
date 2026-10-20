@@ -12,12 +12,6 @@ const promessas = [
   { emoji: "📱", titulo: "Celular, tablet ou computador", texto: "Feito pra dedinhos: botões grandes, tudo funciona com toque e no tema claro ou escuro." },
 ];
 
-// Com cacheComponents, new Date() solto quebra o prerender — "use cache" congela o ano no build
-async function AnoAtual() {
-  "use cache";
-  return new Date().getFullYear();
-}
-
 export default function Home() {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-1 flex-col px-4 sm:px-6">
@@ -92,7 +86,7 @@ export default function Home() {
       </main>
 
       <footer className="py-6 text-center text-sm text-muted-foreground">
-        Feito com 💜 no Brasil · Planeta Cuca © <AnoAtual />
+        Feito com 💜 no Brasil · Planeta Cuca © {new Date().getFullYear()}
       </footer>
     </div>
   );
