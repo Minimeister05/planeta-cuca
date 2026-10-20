@@ -8,11 +8,21 @@ const tamanhos = {
 };
 
 // Planeta desenhado só com CSS: gradiente, sombra de volume, crateras e anel opcional
-export function Planeta({ jogo, tamanho = "md", className }: { jogo: Jogo; tamanho?: keyof typeof tamanhos; className?: string }) {
+export function Planeta({
+  jogo,
+  tamanho = "md",
+  className,
+  style,
+}: {
+  jogo: Jogo;
+  tamanho?: keyof typeof tamanhos;
+  className?: string;
+  style?: React.CSSProperties;
+}) {
   const t = tamanhos[tamanho];
   const anel = cn("absolute inset-x-[-24%] top-1/2 h-[28%] -translate-y-1/2 -rotate-12 rounded-[50%] border-white/70 dark:border-white/45", t.anel);
   return (
-    <div className={cn("relative shrink-0", t.caixa, className)}>
+    <div className={cn("relative shrink-0", t.caixa, className)} style={style}>
       {jogo.anel && <div aria-hidden className={anel} />}
       <div
         className={cn(

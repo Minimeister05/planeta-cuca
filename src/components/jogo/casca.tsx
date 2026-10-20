@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, Volume2, VolumeX } from "lucide-react";
+import { ArrowLeft, AudioLines, Volume2, VolumeX } from "lucide-react";
 import { acharJogo, type JogoId } from "@/lib/jogos";
 import { alternarSom, useProgresso } from "@/lib/progresso";
 import { cn } from "@/lib/utils";
@@ -64,7 +64,7 @@ export function CascaJogo({
         </div>
         {aoOuvir && (
           <button type="button" onClick={aoOuvir} aria-label="Ouvir de novo" className={botaoRedondo}>
-            <span aria-hidden className="text-xl">🗣️</span>
+            <AudioLines />
           </button>
         )}
         <button

@@ -27,7 +27,7 @@ export const figurinhas: Figurinha[] = [
   { id: "elefante", emoji: "🐘", nome: "Elefante", categoria: "animais", raridade: "comum", fato: "O elefante consegue sentir vibrações do chão pelas patas, como se escutasse com os pés." },
   { id: "tubarao", emoji: "🦈", nome: "Tubarão", categoria: "animais", raridade: "rara", fato: "Os tubarões existem há mais tempo que as árvores!" },
   { id: "abelha", emoji: "🐝", nome: "Abelha", categoria: "animais", raridade: "comum", fato: "As abelhas fazem uma dancinha pra mostrar às amigas onde estão as flores." },
-  { id: "coruja", emoji: "🦉", nome: "Coruja", categoria: "animais", raridade: "comum", fato: "A coruja consegue virar a cabeça quase uma volta inteira pra olhar pra trás." },
+  { id: "coruja", emoji: "🦉", nome: "Coruja", categoria: "animais", raridade: "comum", fato: "A coruja consegue girar a cabeça três quartos de volta: dá pra olhar pras próprias costas!" },
   { id: "pinguim", emoji: "🐧", nome: "Pinguim", categoria: "animais", raridade: "comum", fato: "Pinguins não voam no céu, mas parecem voar debaixo d'água de tão rápido que nadam." },
   { id: "preguica", emoji: "🦥", nome: "Bicho-preguiça", categoria: "animais", raridade: "rara", fato: "O bicho-preguiça só desce da árvore mais ou menos uma vez por semana... pra fazer cocô!" },
   { id: "golfinho", emoji: "🐬", nome: "Golfinho", categoria: "animais", raridade: "comum", fato: "O golfinho dorme com metade do cérebro de cada vez, pra continuar nadando e respirando." },
